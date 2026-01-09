@@ -1,5 +1,6 @@
 import PostCard, { Post } from "@/app/components/PostCard";
 import PostSearchClient from "./components/PostSearchClient";
+import Newsletter from "./components/Newsletter";
 
 async function getPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -24,6 +25,7 @@ export default async function Home() {
       {/* postcard컴포넌트 넣는 부분 */}
 
       <PostSearchClient posts={posts.slice(0, 20)} />
+      <Newsletter />
     </main>
   );
 }
